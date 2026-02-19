@@ -615,7 +615,7 @@ public class ImageControllerImplTest {
             + "sharpened-brightened-download-png-blurred");
 
     // Save the final result after all cascaded operations
-    controller.processCommand("save /Users/akshay/Desktop/"
+    controller.processCommand("save resources/save_image/"
             + "sharpened-brightened-download-png-blurred.png "
             + "sharpened-brightened-download-png-blurred");
 
@@ -624,7 +624,7 @@ public class ImageControllerImplTest {
             + "Brightened image by 20: brightened-download-png-blurred\n"
             + "sharpen applied to: sharpened-brightened-download-png-blurred\n"
             + "Saved image: sharpened-brightened-download-png-blurred to "
-            + "/Users/akshay/Desktop/sharpened-brightened-download-png-blurred.png";
+            + "resources/save_image/sharpened-brightened-download-png-blurred.png";
 
     assertEquals(normalizeOutput(expectedOutput), normalizeOutput(outputStreamCaptor.toString()));
   }

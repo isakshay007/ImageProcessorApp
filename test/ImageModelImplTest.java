@@ -403,7 +403,7 @@ public class ImageModelImplTest {
     model.splitOperation("colorcorrect", "download-png",
             "dest-colorCorrect", 50, null);
     model.load("test/test_image/Output_png/" +
-            "dest-colorCorrect.png", "expected-dest-colorCorrect");
+            "dest-colorcorrect.png", "expected-dest-colorCorrect");
 
     Image actualImage = model.getImage("dest-colorCorrect");
     Image expectedImage = model.getImage("expected-dest-colorCorrect");
