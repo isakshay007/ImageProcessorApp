@@ -1,0 +1,151 @@
+# Load PNG image
+load test_image/download.png download-png
+
+# Brighten the PNG image by 20
+brighten 20 download-png download-png-brightened
+save save_image/download-png-brightened.png download-png-brightened
+
+# Darken the PNG image by 50
+brighten -50 download-png download-png-darken
+save save_image/download-png-darken.png download-png-darken
+
+# Flip the PNG image horizontally
+flip horizontal download-png download-png-flipped-horizontal
+save save_image/download-png-flipped-horizontal.png download-png-flipped-horizontal
+
+# Flip the PNG image vertically
+flip vertical download-png download-png-flipped-vertical
+save save_image/download-png-flipped-vertical.png download-png-flipped-vertical
+
+# Sharpen the PNG image
+sharpen download-png download-png-sharpened
+save save_image/download-png-sharpened.png download-png-sharpened
+
+# Convert the PNG image to sepia tone
+sepia download-png download-png-sepia
+save save_image/download-png-sepia.png download-png-sepia
+
+# Apply a blur effect to the PNG image
+blur download-png download-png-blurred
+save save_image/download-png-blurred.png download-png-blurred
+
+# Split RGB channels of the PNG image into separate images
+rgb-split download-png download-png-red download-png-green download-png-blue
+save save_image/download-png-red.png download-png-red
+save save_image/download-png-green.png download-png-green
+save save_image/download-png-blue.png download-png-blue
+
+# Combine separate RGB channels back into one image
+rgb-combine download-png-combined download-png-red download-png-green download-png-blue
+save save_image/download-png-combined.png download-png-combined
+
+# Convert PNG to greyscale using luma component
+greyscale luma download-png download-png-greyscale
+save save_image/download-png-greyscale.png download-png-greyscale
+
+# Visualize the value component of the PNG image
+value-component download-png download-png-value-component
+save save_image/download-png-value-component.png download-png-value-component
+
+# Visualize the intensity component of the PNG image
+intensity-component download-png download-png-intensity-component
+save save_image/download-png-intensity-component.png download-png-intensity-component
+
+# Visualize the luma component of the PNG image
+luma-component download-png download-png-luma-component
+save save_image/download-png-luma-component.png download-png-luma-component
+
+# Visualize the red color channel of the PNG image
+red-component download-png download-png-red-component
+save save_image/download-png-red-component.png download-png-red-component
+
+# Visualize the green color channel of the PNG image
+green-component download-png download-png-green-component
+save save_image/download-png-green-component.png download-png-green-component
+
+# Visualize the blue color channel of the PNG image
+blue-component download-png download-png-blue-component
+save save_image/download-png-blue-component.png download-png-blue-component
+
+# Apply a blurred effect to the left half of the image using a 50% split
+split blur download-png dest-blur.png 50
+save save_image/dest-blur.png dest-blur.png
+
+# Apply a sharpen effect to the left half of the image using a 50% split
+split sharpen download-png dest-sharpen.png 50
+save save_image/dest-sharpen.png dest-sharpen.png
+
+# Apply sepia to the left half of the image using a 50% split
+split sepia download-png dest-sepia.png 50
+save save_image/dest-sepia.png dest-sepia.png
+
+# Apply greyscale to the left half of the image using a 50% split
+split greyscale download-png dest-greyscale.png 50
+save save_image/dest-greyscale.png dest-greyscale.png
+
+# Apply color correction to the left half of the image using a 50% split
+split colorcorrect download-png dest-colorcorrect.png 50
+save save_image/dest-colorcorrect.png dest-colorcorrect.png
+
+# Adjust levels on the left half of the image with a split at 50%, using black, mid, and white points
+split levels download-png dest-levels.png 50 0 128 255
+save save_image/dest-levels.png dest-levels.png
+
+# Generate a histogram visualization for the PNG image
+histogram download-png download-histogram-png
+save save_image/download-histogram.png download-histogram-png
+
+# Apply color correction to the PNG image
+color-correct download-png colorcorrected-png
+save save_image/colorcorrected.png colorcorrected-png
+
+# Adjust levels of the PNG image with specified black, mid, and white points
+levels-adjust 100 128 234 download-png levelsadjust.png
+save save_image/levelsadjust.png levelsadjust.png
+
+# Compress the image by 10% using Haar wavelet compression
+compress 10 download-png compressed_image_10.png
+save save_image/compressed_image_10.png compressed_image_10.png
+
+# Compress the image by 50% using Haar wavelet compression
+compress 50 download-png compressed_image_50.png
+save save_image/compressed_image_50.png compressed_image_50.png
+
+#Downscale Feature
+
+downscale 100 50 download-png downscaledImage
+save save_image/downscaledImage.png downscaledImage
+
+# Commands With Mask Feature
+
+load test_image/mask-image.png mask-image
+
+sharpen download-png mask-image masked-sharpened-image
+save save_image/masked-sharpened-output.png masked-sharpened-image
+
+sepia download-png mask-image masked-sepia-image
+save save_image/masked-sepia-output.png masked-sepia-image
+
+blur download-png mask-image masked-blurred-image
+save save_image/masked-blurred-output.png masked-blurred-image
+
+greyscale luma download-png mask-image masked-greyscale-image
+save save_image/masked-greyscale-output.png masked-greyscale-image
+
+value-component download-png mask-image masked-value-component-image
+save save_image/masked-value-component-output.png masked-value-component-image
+
+intensity-component download-png mask-image masked-intensity-component-image
+save save_image/masked-intensity-component-output.png masked-intensity-component-image
+
+luma-component download-png mask-image masked-luma-component-image
+save save_image/masked-luma-component-output.png masked-luma-component-image
+
+red-component download-png mask-image masked-red-component-image
+save save_image/masked-red-component-output.png masked-red-component-image
+
+green-component download-png mask-image masked-green-component-image
+save save_image/masked-green-component-output.png masked-green-component-image
+
+blue-component download-png mask-image masked-blue-component-image
+save save_image/masked-blue-component-output.png masked-blue-component-image

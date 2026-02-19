@@ -1,0 +1,3 @@
+load resources/test_image/download.png download-png
+brighten 20 download-png download-png-brightened
+save resources/save_image/download-png-brightened.png download-png-brightened
